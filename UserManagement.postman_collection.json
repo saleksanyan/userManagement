@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "46482d29-ade3-4d51-8d68-17d85e6ceec5",
+		"name": "UserManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29759644",
+		"_collection_link": "https://warped-space-722961.postman.co/workspace/Icketi~ce9585f0-c259-4108-9b1b-b1687a152020/collection/29759644-46482d29-ade3-4d51-8d68-17d85e6ceec5?action=share&source=collection_link&creator=29759644"
+	},
+	"item": [
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"name\",\n    \"password\": \"pass\",\n    \"mail\": \"email\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"pass\",\n    \"mail\": \"email\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "user profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyODYyMDU5OS0xNzM4LTRmMWEtYTg3ZC1jZjk1MmM3NmU3MzAiLCJpYXQiOjE3MjMyNzI3OTgsImV4cCI6MTcyMzI3NjM5OH0.nrfmqTs7oeMD892UU5sKI30N4WFn_jDVwrLrpNFEHZw",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/users/profile"
+			},
+			"response": []
+		}
+	]
+}
